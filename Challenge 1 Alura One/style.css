@@ -160,3 +160,164 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+/* ==========================
+   VARIABLES DE COLOR Y ESTILO
+   ========================== */
+   :root {
+    --color-primary: #5A189A;      /* Fondo general morado oscuro para un aspecto lujoso y moderno. */
+    --color-secondary: #FFD166;    /* Amarillo suave para contrastes y áreas destacadas. */
+    --color-tertiary: #06D6A0;     /* Verde vibrante para detalles y elementos interactivos. */
+    --color-button: #7209B7;       /* Color morado más intenso para botones importantes. */
+    --color-button-hover: #4A0D75; /* Tono morado aún más oscuro para efectos hover. */
+    --color-text: #1D3557;         /* Azul oscuro para mantener una buena legibilidad. */
+    --color-white: #F1FAEE;        /* Blanco suave para un contraste agradable. */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad a los elementos. */
+    --border-radius: 32px;         /* Bordes redondeados que mantienen la apariencia amigable. */
+}
+
+/* ==========================
+   REINICIO Y CONFIGURACIÓN BÁSICA
+   ========================== */
+* {
+    margin: 0;   /* Eliminamos márgenes por defecto para asegurar consistencia visual. */
+    padding: 0;  /* Eliminamos rellenos por defecto. */
+    box-sizing: border-box; /* Incluye relleno y borde en el tamaño total de elementos. */
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary); /* Aplicamos el fondo principal de la aplicación. */
+    display: flex;
+    justify-content: center; /* Centramos el contenido horizontalmente. */
+    align-items: center;      /* Centramos el contenido verticalmente. */
+    font-family: "Inter", sans-serif; /* Tipografía moderna y legible. */
+    color: var(--color-text);
+}
+
+/* ==========================
+   ESTRUCTURA PRINCIPAL
+   ========================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 8px 16px var(--shadow-color); /* Añade sombra para mejorar la apariencia profesional. */
+    transition: all 0.3s;
+}
+
+.input-section:hover {
+    transform: translateY(-4px); /* Añade efecto de flotación al pasar el ratón. */
+}
+
+/* ==========================
+   TITULOS
+   ========================== */
+.main-title {
+    font-size: 52px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   CAMPOS DE ENTRADA Y BOTONES
+   ========================== */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--color-tertiary);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-button);
+    color: var(--color-white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+.button-add {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* ==========================
+   LISTAS Y RESULTADOS
+   ========================== */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05; /* Color específico para resaltar resultados importantes. */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ==========================
+   BOTÓN DE SORTEAR TÍTULO
+   ========================== */
+.button-draw {
+    padding: 12px 30px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
